@@ -2,11 +2,11 @@
   description = "NixOS Flake: Base Estable + Herramientas Inestables + Antigravity";
 
   inputs = {
-    # 1. El sistema base y Home Manager apuntan a la rama ESTABLE (24.05)
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05"; 
+
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11"; 
     
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.05";
+      url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -16,7 +16,6 @@
     # 3. Repositorio de tu IDE
     antigravity-nix = {
       url = "github:jacopone/antigravity-nix";
-      # Forzamos a Antigravity a construirse usando las librerías inestables
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
   };
