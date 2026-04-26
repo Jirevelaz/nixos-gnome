@@ -149,6 +149,7 @@ programs.firefox.enable = true;
     # ---------------------------------------------
     
     unstablePkgs.vscode
+    unstablePkgs.obsidian
     
     # ---------------------------------------------
     # 3. OVERLAYS Y PERSONALIZADOS
@@ -209,20 +210,23 @@ programs.firefox.enable = true;
   ];
   
   # Montaje automático de SSD 2 con bypass de seguridad
-  fileSystems."/mnt/ssd2" = {
-    device = "/dev/disk/by-uuid/CA48F39648F37F8D"; 
-    fsType = "auto"; # Usamos auto, igual que en tu captura, para que el kernel decida el mejor driver disponible (ntfs3 o ntfs-3g)
-    options = [ 
-      "nosuid"
-      "nodev"
-      "nofail"
-      "x-gvfs-show"
-      "x-gvfs-name=ssd2"
-      "uid=1000"
-      "gid=100"  # Adaptado al grupo 'users' de NixOS
-      "umask=0022"
-    ];
-  };
+fileSystems."/mnt/ssd2" = {
+  device = "/dev/disk/by-uuid/CA48F39648F37F8D";
+  fsType = "ntfs-3g";
+  options = [
+    "rw"
+    "uid=1000"
+    "gid=100"
+    "dmask=0022"
+    "fmask=0022"  # Cambiado: permisos de ejecución correctos
+    "exec"
+    "x-gvfs-show"
+    "x-gvfs-name=ssd2"
+    "windows_names"
+    "nofail"
+    "big_writes"   # Mejor rendimiento
+  ];
+};
   
   # ==============================
   # HARDWARE: NVIDIA PRIME OFF-LOAD
