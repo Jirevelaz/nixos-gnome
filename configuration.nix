@@ -7,10 +7,6 @@
       ./gnome-rice.nix
       #<home-manager/nixos>
     ];
-    
-  home-manager.useGlobalPkgs = true;
-  home-manager.useUserPackages = true;
-  home-manager.users.jirevelaz = import ./home.nix;
 
   # ==============================
   # ARRANQUE Y SISTEMA
