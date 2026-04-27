@@ -2,16 +2,19 @@
 
 {
   # Vinculación del logo ASCII [cite: 47]
-  xdg.configFile."fastfetch/logo_custom.txt".source = ../logo_custom.txt;
+ # xdg.configFile."fastfetch/logo_custom.txt".source = ../logo_custom.txt;
+   #"logo": {
+    #    "type": "file",
+     #   "source": "${config.xdg.configHome}/fastfetch/logo_custom.txt",
+      #  "color": { "1": "bright_cyan" },
+       # "padding": { "top": 0, "right": 2 }
 
   # Configuración estética del JSONC [cite: 48-51]
   xdg.configFile."fastfetch/config.jsonc".text = ''
     {
       "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-      "logo": {
-        "type": "file",
-        "source": "${config.xdg.configHome}/fastfetch/logo_custom.txt",
-        "color": { "1": "bright_cyan" },
+    "logo": {
+        "source": "nixos_old",
         "padding": { "top": 0, "right": 2 }
       },
       "display": {
