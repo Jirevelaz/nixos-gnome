@@ -40,6 +40,9 @@
     
     # Evitar caída de velocidad por ahorro de batería en la antena
     networkmanager.wifi.powersave = false;
+    
+    # Cemu: Permitir telemetría UDP desde el servidor DSU (iPhone)
+    firewall.allowedUDPPorts = [ 26760 ];
   };
 
   # Optimización TCP Stack para aprovechar anchos de banda >100Mbps
@@ -215,6 +218,14 @@ fileSystems."/mnt/ssd2" = {
       "x-gvfs-show"
     ];
   };
+  
+  # ==============================
+  # REGLAS DE DISPOSITIVOS (UDEV)
+  # ==============================
+  services.udev.extraRules = ''
+    # Regla para permitir a SDL2 leer el Wiimote (Vendor 057e, Product 0306)
+    KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="057e", ATTRS{idProduct}=="0306", MODE="0666"
+  '';
   
   # ==============================
   # HARDWARE: NVIDIA PRIME OFF-LOAD
