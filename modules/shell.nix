@@ -1,9 +1,10 @@
 { config, pkgs, ... }:
-
 {
   programs.bash = {
     enable = true;
-    # Ejecución automática al abrir la terminal [cite: 53]
+    shellAliases = {
+      nix-nuke = "sudo nix-env --profile /nix/var/nix/profiles/system --delete-generations old && sudo nix-collect-garbage -d && sudo nixos-rebuild boot";
+    };
     initExtra = ''
       fastfetch
     '';

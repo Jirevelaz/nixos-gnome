@@ -173,6 +173,7 @@ programs.firefox.enable = true;
     # 3. OVERLAYS Y PERSONALIZADOS
     # ---------------------------------------------
     google-antigravity-no-fhs
+    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   # Variables de entorno

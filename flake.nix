@@ -13,14 +13,19 @@
     # 2. Declaramos la rama INESTABLE de forma aislada
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    # 3. Repositorio de tu IDE
+    # 3. Repositorio de IDE Antigravity
     antigravity-nix = {
       url = "github:jacopone/antigravity-nix";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+    # 4. Repositorio de Zen Browser
+    zen-browser = {
+      url = "github:youwen5/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs: 
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager,zen-browser,... }@inputs: 
     let
       system = "x86_64-linux";
       
