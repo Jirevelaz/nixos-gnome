@@ -1,0 +1,113 @@
+[33mcommit 799b1a63b18afc5d59bb61cf1ede6a4949c00ce1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: Jirevelaz <jirevelazco4@gmail.com>
+Date:   Fri May 1 17:25:40 2026 -0500
+
+    rider ide added
+
+[33mcommit 6df59a2e64499e999229af8609d12662286d0fbf[m
+Author: Jirevelaz <jirevelazco4@gmail.com>
+Date:   Thu Apr 30 18:19:51 2026 -0500
+
+    btop agregado para mejor gestion
+
+[33mcommit 688baadd896e9dcfc545aa78681c477334874ee9[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Jirevelaz <jirevelazco4@gmail.com>
+Date:   Tue Apr 28 23:44:22 2026 -0500
+
+    pnpm agregado a sdks para proyectos
+
+[33mcommit 4ed9f8af9c86728bc76e066768bdeb4502a65915[m
+Author: Jirevelaz <jirevelazco4@gmail.com>
+Date:   Tue Apr 28 23:40:19 2026 -0500
+
+    CAPA DE COMPATIBILIDAD (NIX-LD)
+
+[33mcommit 2613898e22acebafe0543e68f0014d5fa87b0ead[m
+Author: Jirevelaz <jirevelazco4@gmail.com>
+Date:   Tue Apr 28 18:19:59 2026 -0500
+
+    agregue soporte para dsu y emular giroscopio iphone
+
+[33mcommit 995541b38d3373062268fccb9b3d5485af273c94[m
+Author: Jirevelaz <jirevelazco4@gmail.com>
+Date:   Tue Apr 28 18:00:06 2026 -0500
+
+    agregue soporte para mi control de wii
+
+[33mcommit 360562440cbcc2560242dd66b911ec91f90c9fa5[m
+Author: Jirevelaz <jirevelazco4@gmail.com>
+Date:   Sun Apr 26 22:27:19 2026 -0500
+
+    paleta de colores acomodada para el logo viejo
+
+[33mcommit 6f3ed61e86bdc3a55a2153e4005cbd820b0d0bf3[m
+Author: Jirevelaz <jirevelazco4@gmail.com>
+Date:   Sun Apr 26 22:23:15 2026 -0500
+
+    agregar opcion personalizada o poder usar el logo antiguo2
+
+[33mcommit 8f84a74548aaee8e6e5c6118b31fcfbac798b1f1[m
+Author: Jirevelaz <jirevelazco4@gmail.com>
+Date:   Sun Apr 26 22:20:42 2026 -0500
+
+    agregar opcion personalizada o poder usar el logo antiguo
+
+[33mcommit dfde487c8f23a6bba40652ad1d7bc3ea980ce460[m
+Author: Jirevelaz <jirevelazco4@gmail.com>
+Date:   Sun Apr 26 17:38:22 2026 -0500
+
+    Migracion de ssd2 de ntfs a sistema linux
+
+[33mcommit 9a6eb7e38eb4b7a2410a0a0e0c4e19706e4c21a3[m
+Author: Jirevelaz <jirevelazco4@gmail.com>
+Date:   Sun Apr 26 01:15:12 2026 -0500
+
+    fix configuracion de home manager que se repite en flakes.nix
+
+[33mcommit 1f8ff74884e917657c178086bcdafb1ad29748cc[m
+Author: Jirevelaz <jirevelazco4@gmail.com>
+Date:   Sun Apr 26 00:11:14 2026 -0500
+
+    prueba de montaje steam
+
+[33mcommit 7255a88b2e2221f8eae167032ca4d0bb5fe01020[m
+Author: Jirevelaz <jirevelazco4@gmail.com>
+Date:   Sat Apr 25 23:56:06 2026 -0500
+
+    prueba de montaje version 4  para  ssd2 para que jale el kernel y ntfs-3g para steammmm
+
+[33mcommit 3586c1d2954c2d7af2de627ac987da7b847c1850[m
+Author: Jirevelaz <jirevelazco4@gmail.com>
+Date:   Sat Apr 25 23:35:20 2026 -0500
+
+    prueba de montaje version 4  para  ssd2 para que jale el kernel y ntfs3 para steam
+
+[33mcommit cef7d08e9e185b62bcfade74ab666ab80d12cd1d[m
+Author: Jirevelaz <jirevelazco4@gmail.com>
+Date:   Sat Apr 25 23:23:10 2026 -0500
+
+    prueba de montaje version 3  para  ssd2 para que jale el kernel y ntfs3g  para steam
+
+[33mcommit 25679658800beef6e565db25100f80e14db72b0c[m
+Author: Jirevelaz <jirevelazco4@gmail.com>
+Date:   Sat Apr 25 23:13:35 2026 -0500
+
+    prueba de montaje version 2 para  ssd2 para proton/wine para steam
+
+[33mcommit 9111ac918803404bb9851837c538ed46999848c2[m
+Author: Jirevelaz <jirevelazco4@gmail.com>
+Date:   Sat Apr 25 23:02:50 2026 -0500
+
+    prueba de montaje ssd2 para proton/wine para steam
+
+[33mcommit e6a378c71a865a89273318c3c59fc717642488fd[m
+Author: Jirevelaz <jirevelazco4@gmail.com>
+Date:   Sat Apr 25 18:36:04 2026 -0500
+
+    agregando paquete obsidian inestable
+
+[33mcommit f8405c4d345a0faf3d38a4744914594fac345258[m
+Author: Jirevelaz <jirevelazco4@gmail.com>
+Date:   Sat Apr 25 17:57:49 2026 -0500
+
+    chore: alineación a NixOS 25.11, corrección de gráficos y permisos

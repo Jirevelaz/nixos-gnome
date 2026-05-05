@@ -84,6 +84,20 @@
     nerd-fonts.droid-sans-mono
   ];
 
+# ==============================
+  # CAPA DE COMPATIBILIDAD (NIX-LD)
+  # ==============================
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    stdenv.cc.cc  # Crítico: Librería estándar de C++ (requerido por esbuild y node-gyp)
+    zlib          # Compresión básica, omnipresente en herramientas web
+    openssl       # Dependencia común para criptografía y redes
+    icu           # Internacionalización (vital para .NET y Node.js)
+    vips          # Procesamiento de imágenes (necesario si usas Astro Image con Sharp)
+    curl
+    util-linux    # Provee dependencias subyacentes como libuuid
+  ];
+  
 
   # ==============================
   # USUARIOS Y PAQUETES
@@ -111,6 +125,8 @@ programs.firefox.enable = true;
     ntfs3g
     cmatrix
     git
+    btop
+    mediawriter
 
     # --- Productividad y Comunicación ---
     onlyoffice-desktopeditors
@@ -137,6 +153,7 @@ programs.firefox.enable = true;
     
     # Node.js y Rust
     nodejs_22
+    pnpm
     rustc
     cargo
     gcc            
@@ -149,6 +166,8 @@ programs.firefox.enable = true;
     
     unstablePkgs.vscode
     unstablePkgs.obsidian
+    unstablePkgs.jetbrains.rider
+    unstablePkgs.google-chrome
     
     # ---------------------------------------------
     # 3. OVERLAYS Y PERSONALIZADOS
