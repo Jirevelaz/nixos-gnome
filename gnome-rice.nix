@@ -24,5 +24,21 @@
 
   # 2. Forzar dconf para tu usuario
   # Nota: Esto aplica los valores a nivel de base de datos de dconf
-  programs.dconf.enable = true;
-}
+  programs.dconf = {
+    enable = true;
+    profiles.user.databases = [{
+      settings = {
+        "org/gnome/settings-daemon/plugins/media-keys" = {
+          custom-keybindings = [
+            "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+          ];
+        };
+        "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+          name = "Terminal";
+          command = "ptyxis";
+          binding = "<Control><Alt>t";
+        };
+      };
+    }];
+  };   
+}      

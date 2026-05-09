@@ -17,8 +17,6 @@
   system.stateVersion = "25.11"; 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   
-  
-
   # Kernel más reciente (Vital para soporte de hardware moderno)
   boot.kernelPackages = pkgs.linuxPackages_latest;
   
@@ -105,7 +103,7 @@
   users.users.jirevelaz = {
     isNormalUser = true;
     description = "Jire Israel Gonzalez Diaz";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
   };
 
 programs.firefox.enable = true;
@@ -127,6 +125,7 @@ programs.firefox.enable = true;
     git
     btop
     mediawriter
+    protonup-qt
 
     # --- Productividad y Comunicación ---
     onlyoffice-desktopeditors
@@ -146,7 +145,8 @@ programs.firefox.enable = true;
     nicotine-plus
 
   # --- Desarrollo (SDKs Globales) ---
-    
+    unstablePkgs.terraform
+    python3
     
 # .NET SDK 8
     dotnetCorePackages.sdk_8_0
@@ -175,6 +175,8 @@ programs.firefox.enable = true;
     google-antigravity-no-fhs
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
+  
+  virtualisation.docker.enable = true;
 
   # Variables de entorno
   environment.variables = {
