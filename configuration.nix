@@ -147,6 +147,7 @@ programs.firefox.enable = true;
   # --- Desarrollo (SDKs Globales) ---
     unstablePkgs.terraform
     python3
+    uv
     
 # .NET SDK 8
     dotnetCorePackages.sdk_8_0
@@ -158,16 +159,17 @@ programs.firefox.enable = true;
     cargo
     gcc            
     pkg-config    
-    
+    obs-studio
     
     # ---------------------------------------------
     # 2. PAQUETES INESTABLES (Llamado explícito)
     # ---------------------------------------------
     
-    unstablePkgs.vscode
+    unstablePkgs.vscode-fhs
     unstablePkgs.obsidian
     unstablePkgs.jetbrains.rider
     unstablePkgs.google-chrome
+    unstablePkgs.zed-editor-fhs
     
     # ---------------------------------------------
     # 3. OVERLAYS Y PERSONALIZADOS
