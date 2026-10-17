@@ -1,11 +1,11 @@
 { config, pkgs, inputs, unstablePkgs, ... }:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-      ./gnome.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix
+    ../../modules/nixos/gnome.nix
+    ../../modules/nixos/hyprland.nix
+  ];
 
   # ==============================
   # BOOTLOADER & SYSTEM
@@ -108,6 +108,7 @@
     pciutils
     inputs.helium.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.spotifast.packages."${pkgs.stdenv.hostPlatform.system}".default
+    gearlever
   ];
 
   # ==============================

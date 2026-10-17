@@ -23,7 +23,12 @@
     antigravity-nix = {
       url = "github:jacopone/antigravity-nix";
       inputs.nixpkgs.follows = "nixpkgs";
-      };
+    };
+
+    caelestia-shell = {
+      url = "github:caelestia-dots/shell";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, antigravity-nix, ... }@inputs: 
@@ -41,13 +46,13 @@
       specialArgs = { inherit inputs unstablePkgs; };
       
       modules = [
-        ./configuration.nix
+        ./hosts/nixos/configuration.nix
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.extraSpecialArgs = { inherit inputs unstablePkgs; };
-          home-manager.users.jirevelaz = import ./home.nix;
+          home-manager.users.jirevelaz = import ./modules/home;
         }
       ];
     };

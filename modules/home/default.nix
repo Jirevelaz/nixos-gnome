@@ -1,9 +1,14 @@
 { config, pkgs, unstablePkgs, inputs, ... }:
 
 {
+  imports = [
+    ./caelestia.nix
+    ./hyprland
+  ];
+
   home.username = "jirevelaz";
   home.homeDirectory = "/home/jirevelaz";
-  home.stateVersion = "26.05"; 
+  home.stateVersion = "26.05";
 
   home.packages = with pkgs; [
     onlyoffice-desktopeditors
